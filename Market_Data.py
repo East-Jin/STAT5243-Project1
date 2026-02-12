@@ -2,7 +2,7 @@ import databento as db
 import pandas as pd
 
 company = pd.read_csv('top20_sp500_tech_companies.csv')
-
+company['识别号'] = company['交易所'].apply(lambda x: 'XNAS.ITCH' if x.upper() == 'NASDAQ' else 'XNYS.ITCH') # XNAS.ITCH = Nasdaq; XNYS.ITCH = NYSE
 
 API_KEY = "API_Key" # Enter your API key
 
