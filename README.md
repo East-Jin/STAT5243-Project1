@@ -130,7 +130,15 @@ This schema provides pre-aggregated 1-second OHLCV bars.
 
 ---
 
-### 3.4 API Cost
+### 3.4 Time Standardization
+
+Earnings calls are typically reported in GMT.
+
+Since Databento requires UTC timestamps, all call times are converted to UTC before querying. There has been no change in timing.
+
+---
+
+### 3.5 API Cost
 
 Before performing market collection operations, it is crucial to verify the data pricing. This can be accomplished using the following code for querying.
 
@@ -149,14 +157,6 @@ cost = client.metadata.get_cost( # check the cost (we only have $125 in total)
 )
 print("The cost will be",cost) # after we find it's coverable, continue the next step
 ```
-
----
-
-### 3.5 Time Standardization
-
-Earnings calls are typically reported in GMT.
-
-Since Databento requires UTC timestamps, all call times are converted to UTC before querying. There has been no change in timing.
 
 ---
 
