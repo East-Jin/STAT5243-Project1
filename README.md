@@ -62,7 +62,7 @@ Each transcript is stored in structured CSV format with the following fields:
 |----------|------------|
 | ticker | Company ticker |
 | call_date | Earnings call date |
-| call_time | Start time (ET) |
+| call_time | Start time (GMT) |
 | speaker | Speaker name (if available) |
 | section | Prepared Remarks / Q&A |
 | text | Transcript content |
